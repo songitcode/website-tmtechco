@@ -1,0 +1,55 @@
+.more-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s linear;
+    font-size: 14px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 8px;
+}
+
+.more-detail li:hover {
+    background: #00000049;
+}
+
+.more-detail.active {
+    max-height: 500px;
+    /* Có thể cần điều chỉnh giá trị này tùy thuộc vào nội dung */
+}
+
+.border {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.fa-caret-up {
+    rotate: 90deg;
+}
+
+.plus {
+    cursor: pointer;
+    display: inline-flex;
+    float: inline-end;
+
+}
+
+.plus::before {
+    content: "+";
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 900;
+    transition: transform 0.3s linear;
+}
+
+.plus.active::before {
+    content: "−";
+}
+
+.middle-cate span {
+    width: 100%;
+}
+
+.link-cate {
+    text-decoration: none;
+    color: black;
+}
