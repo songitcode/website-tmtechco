@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CÔNG TY TNHH CÔNG NGHỆ TƯỜNG MINH</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./public/imgs/favicon_tuongminh.png">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/responsive.css">
+    <link rel="stylesheet" href="./public/css/menu.css">
+    <link rel="stylesheet" href="./public/css/notification.css">
+    <link rel="stylesheet" href="./public/css/category_transition.css">
+
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/bootstrap-grid.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./public/fontawesome-6.5.2/css/all.min.css" integrity="...">
+    <link rel="stylesheet" href="./public/fontawesome-6.5.2/css/all.css" integrity="...">
+
+
+</head>
+
+<body>
+    <header>
+        <section class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span>
+                            <a href="#" class="top-menu-link">
+                                <i class="fa-solid fa-earth-americas"></i>
+                                <span data-translate-key="GT">Giới Thiệu</span>
+                            </a>
+                        </span>
+                        <span class="ms-2 me-2">
+                            <a href="#" class="top-menu-link">
+                                <i class="fa-solid fa-earth-americas"></i>
+                                <span data-translate-key="GP">Giải Pháp</span>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#" class="top-menu-link">
+                                <i class="fa-solid fa-square-phone h6"></i>
+                                <span data-translate-key="LH">Liên Hệ</span>
+                            </a>
+                        </span>
+                    </div>
+                    <!-- Loader -->
+                    <div class="box-loader" id="loader-language">
+                        <div class="loader"></div>
+                    </div>
+                    <!-- Thông báo VN-->
+                    <div class="box-messagse" id="language-change-message">
+                        <div class="notification show" data-translate-key="language-change-success">
+                            <span></span>
+                        </div>
+                    </div>
+                    <!-- / -->
+                    <div class="col-md-6">
+                        <div class="language-box float-end">
+                            <span>
+                                <a href="#" class="language-link" onclick="changeLanguage('EN'); return false;">
+                                    <abbr title="lang_EN" class="cmt-lang">
+                                        <img src="./public/imgs/flag/lang_EN.png" alt="lang_EN" class="language-top">
+                                    </abbr>
+                                </a>
+                            </span>
+
+                            <span>
+                                <a href="#" class="language-link" onclick="changeLanguage('VN'); return false;">
+                                    <abbr title="lang_VN" class="cmt-lang">
+                                        <img src="./public/imgs/flag/lang_VN.png" alt="lang_VN" class="language-top">
+                                    </abbr>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="header-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 logo-group d-flex align-items-center">
+                        <a href="./index.html">
+                            <img src="./public/imgs/logo_tuongminh.png" alt="logo_tuongminh" class="logo_tuongminh02">
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="slogan" data-translate-key="Khẩu Hiệu">TRUYỀN CẢM HỨNG ĐỂ VƯƠN RA THẾ GIỚI</p>
+                        <form action="#" method="get" class="group-search-header">
+                            <div class="box-search">
+                                <input class="search" type="search" placeholder="Search . . ." />
+                                <div class="search-icon">
+                                    <button type="submit" class="btn-search">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-3 d-flex align-items-center">
+                        <div class="hotline d-none">
+                            <br>
+                            <div><span data-translate-key="Anh Phong">Anh Phong</span>: <a href="tel:+84918167874"
+                                    class="tel">0918 167
+                                    874</a></div>
+                            <div><span data-translate-key="Anh Trà">Anh Trà</span>: <a href="tel:+84896404779"
+                                    class="tel"> 0896 404 779</a></div>
+                            <div><span data-translate-key="Anh Kiêm">Anh Kiêm</span>: <a href="tel:+8429300486"
+                                    class="tel"> 0329 300 486</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="group-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="mobile_btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="main_menu">
+                        <ul>
+                            <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown">
+                                <a href="#" class="nav-link link-mega"><span
+                                        data-translate-key="SỬA CHỮA - THAY THẾ LINH KIỆN"> SỬA CHỮA - THAY THẾ LINH
+                                        KIỆN </span> <i class="fas fa-angle-down"></i></a>
+                                <div class="mega_menu sub_menu">
+                                    <div class="mega_menu_item border">
+                                        <a href="#" class="name-product nav-link">TC20</a> <br>
+                                        <img src="./public/imgs/hinh-noi-dung/19741_1705394508_TC25_new-01-175x175.jpg"
+                                            style="scale: 0.8;">
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown">
+                                <a href="#" class="nav-link link-mega"><span data-translate-key="ĐỌC MÃ VẠCH">ĐỌC MÃ
+                                        VẠCH</span> <i class="fas fa-angle-down"></i></a>
+                                <div class="mega_menu sub_menu">
+                                    <!-- P1 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">TM-2610</a> <br>
+                                        <a href="#"><img
+                                                src="./public/imgs/hinh-noi-dung/19741_1649158224_May quet ma vach can cuoc cong dan.png"></a>
+                                    </div>
+                                    <!-- P2 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">BCST-73 Y TẾ</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1633453759_May doc ma vach inateck BCST 73 2D cho check qr covid 19.png">
+                                        </a>
+                                    </div>
+                                    <!-- P3 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">Symbol DS9208</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589773313_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach SYMBOL-DS9208.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P4 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">DS9308</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589773185_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach ZEBRA-DS8178.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P5 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">ZEBRA DS8178</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589773097_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach ZEBRA-DS9900.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P6 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">Zebra DS9900</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589773228_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach ZEBRA-DS3678.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P7 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">Zebra RFID8500</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589772877_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach ZEBRA-RFID8500.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P8 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">DS2208</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589774579_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach DS2208.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P9 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">DS9808</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589773269_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach Toc Do Cao DS9808.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P10 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">LS3408-ER</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589770956_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach- LS3408-ER-2.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P11 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">1D Zebra LI3608/LI3678</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589773592_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach 1D ZEBRA-LI3608-LI3678.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P12 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">MT2000</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589773393_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach MT2000.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P13 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">Symbol DS6708</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589771973_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach- DS6708.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P14 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">LI2208</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589771790_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach- LI2208.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P15 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">Symbol DS4308</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589771236_CTY Tuong Minh- TMTECHCO-May Doc ma Vach- DS4308.jpg">
+                                        </a>
+                                    </div>
+                                    <!-- P16 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">Symbol LS2208</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1589772518_CTY Tuong Minh- TMTECHCO-May Doc Ma Vach SYMBOL- LS2208.jpg">
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown">
+                                <a href="#" class="nav-link link-mega"><span data-translate-key="MÁY KIỂM KHO">MÁY KIỂM
+                                        KHO</span> <i class="fas fa-angle-down"></i></a>
+                                <div class="mega_menu sub_menu">
+                                    <!-- P1 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">TM-2610</a> <br>
+                                        <a href="#"><img
+                                                src="./public/imgs/hinh-noi-dung/19741_1649158224_May quet ma vach can cuoc cong dan.png"></a>
+                                    </div>
+                                    <!-- P2 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">BCST-73 Y TẾ</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1633453759_May doc ma vach inateck BCST 73 2D cho check qr covid 19.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown">
+                                <a href="#" class="nav-link link-mega"><span data-translate-key="IN MÃ VẠCH">IN MÃ
+                                        VẠCH</span> <i class="fas fa-angle-down"></i></a>
+                                <div class="mega_menu sub_menu">
+                                    <!-- P1 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">TM-2610</a> <br>
+                                        <a href="#"><img
+                                                src="./public/imgs/hinh-noi-dung/19741_1649158224_May quet ma vach can cuoc cong dan.png"></a>
+                                    </div>
+                                    <!-- P2 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">BCST-73 Y TẾ</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1633453759_May doc ma vach inateck BCST 73 2D cho check qr covid 19.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown">
+                                <a href="#" class="nav-link link-mega"><span data-translate-key="LINK KIỆN MÃ VẠCH">LINK
+                                        KIỆN
+                                        MÃ VẠCH</span> <i class="fas fa-angle-down"></i></a>
+                                <div class="mega_menu sub_menu">
+                                    <!-- P1 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">TM-2610</a> <br>
+                                        <a href="#"><img
+                                                src="./public/imgs/hinh-noi-dung/19741_1649158224_May quet ma vach can cuoc cong dan.png"></a>
+                                    </div>
+                                    <!-- P2 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">BCST-73 Y TẾ</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1633453759_May doc ma vach inateck BCST 73 2D cho check qr covid 19.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown">
+                                <a href="#" class="nav-link link-mega"><span data-translate-key="MÁY QUÉT INATECK">MÁY
+                                        QUÉT INATECK</span> <i class="fas fa-angle-down"></i></a>
+                                <div class="mega_menu sub_menu">
+                                    <!-- P1 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">TM-2610</a> <br>
+                                        <a href="#"><img
+                                                src="./public/imgs/hinh-noi-dung/19741_1649158224_May quet ma vach can cuoc cong dan.png"></a>
+                                    </div>
+                                    <!-- P2 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">BCST-73 Y TẾ</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1633453759_May doc ma vach inateck BCST 73 2D cho check qr covid 19.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown">
+                                <a href="#" class="nav-link link-mega"><span data-translate-key="PHẦN MỀM">PHẦN
+                                        MỀM</span> <i class="fas fa-angle-down"></i></a>
+                                <div class="mega_menu sub_menu">
+                                    <!-- P1 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">TM-2610</a> <br>
+                                        <a href="#"><img
+                                                src="./public/imgs/hinh-noi-dung/19741_1649158224_May quet ma vach can cuoc cong dan.png"></a>
+                                    </div>
+                                    <!-- P2 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">BCST-73 Y TẾ</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1633453759_May doc ma vach inateck BCST 73 2D cho check qr covid 19.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="mega_menu_dropdown mega_menu_demo_2 has_dropdown">
+                                <a href="#" class="nav-link link-mega">RFID <i class="fas fa-angle-down"></i></a>
+                                <div class="mega_menu sub_menu">
+                                    <!-- P1 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">TM-2610</a> <br>
+                                        <a href="#"><img
+                                                src="./public/imgs/hinh-noi-dung/19741_1649158224_May quet ma vach can cuoc cong dan.png"></a>
+                                    </div>
+                                    <!-- P2 -->
+                                    <div class="mega_menu_item">
+                                        <a href="#" class="name-product nav-link">BCST-73 Y TẾ</a> <br>
+                                        <a href="#">
+                                            <img
+                                                src="./public/imgs/hinh-noi-dung/19741_1633453759_May doc ma vach inateck BCST 73 2D cho check qr covid 19.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="than-web">
+        <div class="container content-middle">
+            <div class="row pt-3">
+                <div class="col-md-4 col-lg-3">
+                    <div class="top">
+                        <p class="h4 text-center" data-translate-key="dich-vu-cua-chung-toi">Dịch Vụ Của Chúng Tôi</p>
+                        <!-- BOX 1 -->
+                        <div class="box-cate">
+                            <div class="middle-cate border d-flex align-items-center justify-content-center">
+                                <span data-translate-key="SỬA CHỮA - THAY THẾ LINH KIỆN">SỬA CHỮA - THAY THẾ LINH
+                                    KIỆN</span>
+                                <div class="plus btn btn-primary ms-3 d-flex align-items-center" data-target="box1">
+                                </div>
+                            </div>
+                            <ul class="more-detail" id="box1">
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <span>TC20</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- BOX 2 -->
+                        <div class="box-cate">
+                            <div class="middle-cate border d-flex">
+                                <span data-translate-key="cate-trans2">TINH TỨC NGÀNH MÃ VẠCH</span>
+                                <div class="plus btn btn-primary ms-3" data-target="box2">
+                                </div>
+                            </div>
+                            <ul class="more-detail" id="box2">
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>CÁC BƯỚC
+                                            BẢO QUẢN ĐẦU
+                                            IN</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>CHỌN MUA
+                                            MÁY QUÉT QR CODE NÀO TỐT NHẤT
+                                            TRONG VIỆC KHAI BÁO COVID 19 TẠI CÁC DOANH NGHIỆP</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>TƯỜNG MINH
+                                            CHIA SẺ KINH NGHIỆM MUA MÁY
+                                            KIỂM KHO ZEBRA TC21/TC26</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>THẾ HỆ MÁY
+                                            KIỂM KHO MC2200 MC2700 SẼ RA
+                                            MẮT NGƯỜI DÙNG TRONG NĂM 2021</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>5 LÝ DO
+                                            KHÁCH HÀNG NÊN MUA MÁY IN ZEBRA
+                                            ZD420 TẠI CÔNG TY TƯỜNG MINH</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>TOP 5 LÝ
+                                            DO KHÁCH HÀNG NÊN SỬ DỤNG MÁY
+                                            KIỂM KHO HANDHELD ZEBRA TC52x VÀ TC57x</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>ZEBRA
+                                            TECHNOLOGIES RA MẮT MÁY KIỂM KHO
+                                            TC52x VÀ TC57x TẠI VIỆT NAM NĂM THÁNG 8 2020</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>THÔNG BÁO
+                                            RA MẮT MÁY KIỂM KHO ZEBRA
+                                            MC3300X TẠI VIỆT NAM</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>RA MẮT SẢN
+                                            PHẨM MÁY KIỂM KHO TC21 VÀ TC26
+                                            TỪ ZEBRA</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>Hướng dẫn
+                                            bảo trì vệ sinh đầu in Zebra
+                                            đúng cách</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>Kinh
+                                            nghiệm khi mua máy in mã vạch
+                                            Zebra</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- BOX 3 -->
+                        <div class="box-cate">
+                            <div class="middle-cate border d-flex align-items-center justify-content-center">
+                                <span data-translate-key="cate-trans3">CHÍNH SÁCH BẢO HÀNH VÀ VẬN CHUYỂN</span>
+                                <div class="plus btn btn-primary ms-3" data-target="box3">
+                                </div>
+                            </div>
+                            <ul class="more-detail" id="box3">
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>DỊCH VỤ
+                                            ZEBRA ONE CARE TẠI VIỆT NAM</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate"> <span>CHÍNH SÁCH
+                                            VẬN HÀNH HÀNG HÓA</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>CHÍNH SÁCH BẢO HÀNH THIẾT BỊ</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- BOX 4 -->
+                        <div class="box-cate">
+                            <div class="middle-cate border d-flex align-items-center justify-content-center">
+                                <span data-translate-key="cate-trans4">HỆ THỐNG IN TEM NHÃN MÃ VẠCH</span>
+                                <div class="plus btn btn-primary ms-3" data-target="box4">
+                                </div>
+                            </div>
+                            <ul class="more-detail" id="box4">
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Máy In Tem Nhãn Mã Vạch</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Hệ Thống Dán Nhãn Tự Động</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Hệ Thống Ứng Dụng RFID</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- BOX 5 -->
+                        <div class="box-cate">
+                            <div class="middle-cate border d-flex align-items-center justify-content-center">
+                                <span data-translate-key="cate-trans5">HỆ THỐNG QUẢN LÝ KHO BẰNG PDA - HANDHELD</span>
+                                <div class="plus btn btn-primary ms-3" data-target="box5">
+                                </div>
+                            </div>
+                            <ul class="more-detail" id="box5">
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Quản Lý Tài Sản Bằng RFID</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Quản Lý Giao Nhận/ Dịch Vụ Di Động</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Hệ Thống Xuất Nhập Hàng</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Hệ Thống Quản Lý Kho Bãi</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- BOX 6 -->
+                        <div class="box-cate">
+                            <div class="middle-cate border d-flex align-items-center justify-content-center">
+                                <span data-translate-key="cate-trans6">HỆ THỐNG QUẢNG LÝ BÁN HÀNG</span>
+                                <div class="plus btn btn-primary ms-3" data-target="box6">
+                                </div>
+                            </div>
+                            <ul class="more-detail" id="box6">
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Quản Lý Khách Sạn - Resort</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Quản Lý Bán Hàng Nhà Hàng</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Quản Lý Bán Hàng Siêu Thị</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- BOX 7 -->
+                        <div class="box-cate">
+                            <div class="middle-cate border d-flex align-items-center justify-content-center">
+                                <span data-translate-key="cate-trans7">HỆ THỐNG QUẢN LÝ XẾP HÀNG TỰ ĐỘNG</span>
+                                <div class="plus btn btn-primary ms-3" data-target="box7">
+                                </div>
+                            </div>
+                            <ul class="more-detail" id="box7">
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Quầy KIOS Lấy Số Tự Động</span></a>
+                                </li>
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Hệ Thống Xếp Hàng Cho Bệnh Viện - Ngân Hàng</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- BOX 8 -->
+                        <div class="box-cate">
+                            <div class="middle-cate border d-flex align-items-center justify-content-center">
+                                <span data-translate-key="cate-trans8">ĐỐI TÁC NƯỚC NGOÀI</span>
+                                <div class="plus btn btn-primary ms-3" data-target="box8">
+                                </div>
+                            </div>
+                            <ul class="more-detail" id="box8">
+                                <li class="border">
+                                    <i class="fa-solid fa-caret-up"></i> <a href="#" class="link-cate">
+                                        <span>Hãng Zebra tại
+                                            Việt Nam</span></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-9 main-cate">
+                    <h2 class="text-center" data-translate-key="ten-cong-ty">CÔNG TY TNHH CÔNG NGHỆ TƯỜNG MINH</h2>
+                    <div class="box-cate-main p-3">
+                        <div class="row justify-content-center">
+
+                            <div class="col-md-5 border">
+                                <img src="./public/imgs/hinh-noi-dung/19741_1507796460_May-kiem-kho-MC3190Z-1.jpg"
+                                    alt="">
+                            </div>
+                            <div class="col-md-7">
+                                <p>Name</p>
+                                <p>Name</p>
+                                <p>Name</p>
+                                <p>Detail Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate atque
+                                    suscipit dolore et quibusdam sequi iure saepe perspiciatis, architecto hic.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row box-footer">
+                <div class="col col-md-6">
+                    <p class="title-f" data-translate-key="LH">LIÊN HỆ</p>
+                    <div class="group-lien-he">
+                        <ul>
+                            <li><b data-translate-key="ten-cong-ty">CÔNG TY TNHH CÔNG NGHỆ TƯỜNG MINH</b></li>
+                            <li>HOTLINE : 0915 876 500</li>
+                            <li><b data-translate-key="tai-hcm">Tại TP. Hồ Chí Minh</b></li>
+                            <li data-translate-key="tru-so-hcm">Trụ sở: 80 Hà Đặc, Phường Trung Mỹ Tây, Quận 12</li>
+                            <li data-translate-key="chi-nhanh-1"><b>Chi nhánh 1</b>: 14/2B Đào Duy Anh, Phường 9 Quận
+                                Phú Nhuận, TP. Hồ Chí Minh</li>
+                            <li><span data-translate-key="DT">ĐT</span>: 028 627 60663 </li>
+
+                            <li><b data-translate-key="tai-binh-duong">Tại Bình Dương</b></li>
+                            <li data-translate-key="chi-nhanh-2"><b>Chi nhánh 2</b> : Tầng 2 Khu Dân Cư Hiệp Thành 3
+                                TP.Thủ Dầu 1 Bình Dương</li>
+
+                            <li><b data-translate-key="tai-quang-ngai">Tại Quảng Ngãi</b></li>
+                            <li data-translate-key="chi-nhanh-3"><b>Chi nhánh 3</b> : ( sắp khai trương)</li>
+                            <li><b data-translate-key="tai-ha-noi">Tại Hà Nội</b></li>
+                            <li data-translate-key="chi-nhanh-4"><b>Chi nhánh 4</b> : Ngách 622/37, phố Minh Khai,
+                                Phường Vĩnh Tuy, Q.Hai Bà Trưng, Hà
+                                Nội</li>
+                            <li><b data-translate-key="tai-combodia">Tại Cambodia:</b></li>
+                            <li data-translate-key="chi-nhanh-5"><b>Chi nhánh 5 </b>: 1M, street lum,Sangkat Tek Tla,
+                                Khan Sen Sok, phnom Penh , Cambodia
+                            </li>
+                            <li><a href="tel:+855885556696" class="tel">Phone:(+855)885556696 - Mr Sovong</a></li>
+                            <li><b data-translate-key="cong-viec">Liên Hệ Công Việc</b>
+                                <a href="tel:+84918167874" class="tel">0918.167.874</a> <span
+                                    data-translate-key="Anh Phong">(A.Phong)</span>
+                                ; <a href="tel:+84329300486" class="tel">0329.300.486</a> <span
+                                    data-translate-key="Anh Kiêm">(A.Kiêm)</span>
+                                ; <a href="tel:+84896404779" class="tel">0896.404.779</a> <span
+                                    data-translate-key="Anh Trà">(A. Trà)</span>
+                            </li>
+                        </ul>
+                        <img alt="" src="./public/imgs/Banner -1.gif" class="image-gif">
+                    </div>
+                </div>
+                <div class="col col-md-3">
+                    <p class="title-f" data-translate-key="dich-vu-cua-chung-toi">DỊCH VỤ CHÚNG TÔI</p>
+                    <div class="group-ser">
+                        <ul>
+                            <li><a href="#">SỬA CHỮA - THAY THẾ LINH KIỆN</a></li>
+                            <li><a href="#">TIN TỨC NGÀNH MÃ VẠCH</a></li>
+                            <li><a href="#">CHÍNH SÁCH BẢO HÀNH VÀ VẬN CHUYỂN</a></li>
+                            <li><a href="#">HỆ THỐNG IN TEM NHÃN MÃ VẠCH</a></li>
+                            <li><a href="#">HỆ THỐNG QUẢN LÝ KHO BẰNG PDA- HANDHELD</a></li>
+                            <li><a href="#">HỆ THỐNG QUẢN LÝ BÁN HÀNG</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col col-md-3">
+                    <p class="title-f">Newsletter</p>
+                    <div class="group-send">
+                        <p>Sign up for our newsletter</p>
+                        <div class="box-input">
+                            <input type="text" class="input-email-f" placeholder="Enter your email . . .">
+                            <button class="btn-send">SEND</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./public/js/script.js"></script>
+    <script src="./public/js/languages_translate.js"></script>
+    <script src="./public/js/transition_handle.js"></script>
+
+
+    <!-- <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/bootstrap.bundle.min.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
